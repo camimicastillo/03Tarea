@@ -53,11 +53,23 @@ for i in range(1, N_steps):
     y[i] = rk3[0]
     v[i] = rk3[1]
 
-
+#Plot de y vs dy/ds
 plt.plot(y, v, 'g')
 plt.draw()
 plt.title('Grafico de la trayectoria en el espacio. Condiciones iniciales: y=0.1, v=0')
 plt.xlabel('y(s)', fontsize=16)
 plt.ylabel('dy(s)/ds', fontsize=16)
 plt.savefig('figura1.png')
+
+'''
+#Plot de y vs s. Para graficar sacar las comillas arriba y abajo. 
+s_values = np.linspace(0, 20. * np.pi, N_steps)
+plt.plot(s_values, y)
+plt.draw()
+plt.title('Grafico de y(s) versus s. Condiciones iniciales: y=0.1, v=0')
+plt.xlabel('s', fontsize=16)
+plt.ylabel('y(s)', fontsize=16)
+plt.savefig('figura3.png')
+'''
+
 plt.show()
